@@ -9,7 +9,7 @@ Web app that uses the media devices api to allow users to capture any screen, ap
 
 ## Live Demo
 
-Live demo can be found [here](https://leecmoses.github.io/pic-in-pic/)
+Live demo can be found [here](https://leecmoses.github.io/pic-in-pic/).
 
 ## Tech Stack
 

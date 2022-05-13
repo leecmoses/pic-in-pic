@@ -1,7 +1,7 @@
 "use strict";
 
 const videoElement = document.getElementById("video");
-const buttonVideo = document.getElementById("button");
+const button = document.getElementById("button");
 
 // Prompt to select media stream, pass to video element, then play
 async function selectMediaStream() {
@@ -11,19 +11,18 @@ async function selectMediaStream() {
     videoElement.onloadedmetadata = () => {
       videoElement.play();
     };
-  } catch (error) {
-    // Catch errors
-    console.log("whoops, error here:", error);
+  } catch (err) {
+    // Catch and handle error here
   }
 }
 
-buttonVideo.addEventListener("click", async () => {
+button.addEventListener("click", async () => {
   // Disable Button
-  buttonVideo.disabled = true;
+  button.disabled = true;
   // Start Picture and Picture
   await videoElement.requestPictureInPicture();
   // Reset Button
-  buttonVideo.disabled = false;
+  button.disabled = false;
 });
 
 // On Load
